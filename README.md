@@ -1,0 +1,1 @@
+# spring-jpa-logger-h2
