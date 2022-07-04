@@ -7,7 +7,7 @@ public class ServicioHolidays {
 	
 		public static To_Trade_Holidays createHolidays(EntityManager em, int id, String nombre, To_Trade_Calendars calendar) {
 			
-			To_Trade_Holidays a = new To_Trade_Holidays (calendar,id,nombre);
+			To_Trade_Holidays a = new To_Trade_Holidays (id,nombre);
 			
 			em.persist(a);
 			
