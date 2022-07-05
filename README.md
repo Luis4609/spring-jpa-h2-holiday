@@ -1,18 +1,21 @@
-# spring-jpa-logger-h2
+# Intake Java Ficheros
 
-## Documentation Swagger
+## Feature
 
-- https://swagger.io/specification/
-- Swagger: https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
-- Open Api: https://www.baeldung.com/spring-rest-openapi-documentation
-- Spring Doc: https://springdoc.org/
+- [ ] Feature [Ticket](http://srvoptiredmine.optimissa.into/issues/26739)
+- [ ] Feature [Repository](http://srvoptigit.optimissa.into/ic-onboarding/intake-java-ficheros) 
 
-## Testing 
-- https://www.baeldung.com/spring-boot-testing
-- JUnit: https://developer.okta.com/blog/2019/03/28/test-java-spring-boot-junit5
-- JUnit 5: https://mkyong.com/unittest/junit-spring-integration-example/
+```
+cd existing_repo
+git remote add origin http://srvoptigit.optimissa.into/ic-onboarding/intake-java-ficheros.git
+git branch -M feature/nombre.apellido
+git push -uf origin feature/nombre.apellido
+```
 
-## Logger 
-- https://www.baeldung.com/slf4j-with-log4j2-logback
-- https://www.baeldung.com/spring-boot-logging
-- https://www.baeldung.com/spring-boot-auto-configuration-report
+## Test and Deploy
+
+- [ ] Run as a [Java Process](https://www.jetbrains.com/idea/guide/tutorials/hello-world/creating-a-run-configuration/)
+- [ ] [Create Tests](https://www.jetbrains.com/help/idea/create-tests.html#test-code-navigation/) if possible
+- [ ] Document with [Swagger](https://swagger.io/resources/articles/documenting-apis-with-swagger/)
+
+***
