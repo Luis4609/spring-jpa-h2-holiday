@@ -31,12 +31,12 @@ public class Calendario implements Serializable {
 		this.id = id;
 	}
 
-	public String getNombre() {
+	public String getName() {
 		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.name = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**
@@ -49,16 +49,16 @@ public class Calendario implements Serializable {
 
 	/**
 	 * @param id
-	 * @param nombre
+	 * @param name
 	 */
-	public Calendario(int id, String nombre) {
+	public Calendario(int id, String name) {
 		this.id = id;
-		this.name = nombre;
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		return "Calendar [id=" + id + ", nombre=" + name + "]";
+		return "Calendar [id=" + id + ", name=" + name + "]";
 	}
 
 }

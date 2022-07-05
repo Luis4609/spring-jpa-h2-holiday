@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.optimissa.holidayreader.repository;
 
@@ -15,13 +15,13 @@ import com.optimissa.holidayreader.entity.Holiday;
  */
 public interface HolidayRepository extends CrudRepository<Holiday, Long> {
 
-	//Find by id
-	Holiday findById(int id);
-	
-	//Find all
-	List<Holiday> findAll();
-	
-	//
-	List<Holiday> findAllByIdCalendar(int id);
-	
+    //Find by id
+    Holiday findById(long id);
+
+    //Find all
+    List<Holiday> findAll();
+
+    //
+    List<Holiday> findAllByIdCalendar(int id);
+
 }
