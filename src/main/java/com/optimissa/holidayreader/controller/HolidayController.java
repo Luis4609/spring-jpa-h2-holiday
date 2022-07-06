@@ -44,7 +44,6 @@ public class HolidayController {
         return service.find(id);
     }
 
-
     @GetMapping("/all")
     public List<Holiday> getAllHoliday() {
         return service.getAll();
