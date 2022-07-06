@@ -1,0 +1,339 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+paths:
+  /holiday/{id}:
+    get:
+      tags:
+        - holiday-controller
+      operationId: getHoliday
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Holiday'
+    put:
+      tags:
+        - holiday-controller
+      operationId: updateHoliday
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: integer
+              format: int32
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Holiday'
+    delete:
+      tags:
+        - holiday-controller
+      operationId: deleteHoliday
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+  /calendar/{id}:
+    get:
+      tags:
+        - calendar-controller
+      operationId: getCalendar
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Calendario'
+    put:
+      tags:
+        - calendar-controller
+      operationId: updateCalendar
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Calendario'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Calendario'
+  /holiday/:
+    post:
+      tags:
+        - holiday-controller
+      operationId: newHoliday
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Holiday'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Holiday'
+  /calendar/:
+    post:
+      tags:
+        - calendar-controller
+      operationId: newCalendar
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Calendario'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Calendario'
+  /holiday/by-calendar/{id}:
+    get:
+      tags:
+        - holiday-controller
+      operationId: getHolidaysByCalendar
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Holiday'
+  /holiday/all:
+    get:
+      tags:
+        - holiday-controller
+      operationId: getAllHoliday
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Holiday'
+  /calendar/order-by-name:
+    get:
+      tags:
+        - calendar-controller
+      operationId: getAllCalendarsOrderByNameAsc
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Calendario'
+  /calendar/order-by-name-desc:
+    get:
+      tags:
+        - calendar-controller
+      operationId: getAllCalendarsOrderByNameDesc
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Calendario'
+  /calendar/name:
+    get:
+      tags:
+        - calendar-controller
+      operationId: getCalendarByName
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Calendario'
+  /calendar/all:
+    get:
+      tags:
+        - calendar-controller
+      operationId: getAllCalendars
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Calendario'
+  /log:
+    get:
+      tags:
+        - log-controller
+      operationId: log_4
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+    put:
+      tags:
+        - log-controller
+      operationId: log_5
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+    post:
+      tags:
+        - log-controller
+      operationId: log_3
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+    delete:
+      tags:
+        - log-controller
+      operationId: log_6
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+    options:
+      tags:
+        - log-controller
+      operationId: log_1
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+    head:
+      tags:
+        - log-controller
+      operationId: log
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+    patch:
+      tags:
+        - log-controller
+      operationId: log_2
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+components:
+  schemas:
+    Holiday:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        idCalendar:
+          type: integer
+          format: int32
+        date:
+          type: string
+          format: date-time
+    Calendario:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string

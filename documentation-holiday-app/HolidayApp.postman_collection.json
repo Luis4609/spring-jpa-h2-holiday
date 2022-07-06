@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "b80f512f-38c1-4749-9bf8-83dd7b3c8009",
+		"name": "HolidayApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all holidays",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/holiday/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"holiday",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get holiday by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/holiday/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"holiday",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
