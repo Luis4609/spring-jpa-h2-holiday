@@ -56,6 +56,12 @@
             <artifactId>opencsv</artifactId>
             <version>5.3</version>
         </dependency>
+         <!-- Library for add OpenApi Documentation -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.4</version>
+        </dependency>
     </dependencies>
 
     <build>
